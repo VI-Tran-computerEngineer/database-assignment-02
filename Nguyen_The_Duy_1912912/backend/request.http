@@ -1,0 +1,49 @@
+GET  http://localhost:5000/api/food
+
+
+###
+GET http://localhost:5000/api/food/category
+
+###
+POST http://localhost:5000/api/food/dish/  
+Content-Type: application/json
+
+{
+    "dish_id": "D0004  ",
+      "dish_name": "Cake",
+      "dish_image": "img4.png",
+      "dish_description": "Cake is the greatest on the world",
+      "price": 27,
+      "category_id": "DC0003 "
+}
+
+###
+POST http://localhost:5000/api/food/new/  
+Content-Type: application/json
+
+{
+    "dish_id": "D0017",
+      "dish_name": "Bread",
+      "dish_image": "img25.png",
+      "dish_description": "Bread for breakfast",
+      "price": 27,
+      "category_id": "DC0003 "
+}
+
+###
+POST http://localhost:5000/api/food/delete/  
+Content-Type: application/json
+
+{
+    "dish_id": "D0017"
+}
+
+###
+POST http://localhost:5000/api/food/category/DC0001
+Content-Type: application/json
+
+{
+   "category_id": "DC0001",
+    "category_name": "Fast food",
+    "category_description": "Fast for everyone around the world"
+}
