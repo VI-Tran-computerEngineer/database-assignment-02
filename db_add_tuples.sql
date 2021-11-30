@@ -125,3 +125,20 @@ VALUES ('CS0002','CTy A',GETDATE(),'E001','employee1','CN01');
 INSERT INTO CONSIGNMENTS(consignment_id, supplier, consigned_day, 
                         chef_id, chef_username, branch_name)
 VALUES ('CS0003','CTy B',GETDATE(),'E001','employee1','CN01');
+
+------------------------------------------------
+INSERT INTO MANAGERS(username, age, college_certification, toeic_certification, Fname, Minit, Lname)
+VALUES('manager1', 40, 'bachelor', 750, 'Zinedine', 'Zizou', 'Zidane');
+                                         
+INSERT INTO MANAGERS(username, age, college_certification, toeic_certification, Fname, Minit, Lname)
+VALUES('manager2', 44, 'bachelor', 990, 'Carlo', 'Carletto', 'Ancelotti');
+
+------------------------------------------------
+INSERT INTO EMPLOYEES(username, password, email, mgr_id, phone_number, Fname, Minit, Lname, Bdate, gender, registration_date, working_date_per_month)
+VALUES('employ1', '123456', 'employ1@example.com', 1, '0123456789', 'Antonio', 'Blanco', 'Chust', '1999-11-17', 'Male', '2021-07-17', 20);
+
+INSERT INTO EMPLOYEES(username, password, email, mgr_id, phone_number, Fname, Minit, Lname, Bdate, gender, registration_date, working_date_per_month)
+VALUES('employ2', '123456', 'employ2@example.com', 1, '0123456789', 'Francisco', 'Román', 'Alarcón', '1999-11-17', 'Male', '2021-07-17', 20);
+                                
+INSERT INTO EMPLOYEES(username, password, email, mgr_id, phone_number, Fname, Minit, Lname, Bdate, gender, registration_date, working_date_per_month)
+VALUES('employ3', '123456', 'employ3@example.com', 2, '0123456789', 'Cristiano', 'Ronaldo', 'dos Santos', '1985-02-05', 'Male', '2021-07-17', 24); 
