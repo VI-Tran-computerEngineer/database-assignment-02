@@ -28,19 +28,20 @@ create table CUSTOMERS
 
 create table EMPLOYEES
 (
-    account_id char(7) not null,
-    username VARCHAR(50) not null,
-    password varchar(50) not null,
-    email VARCHAR(50) null,
-    phone_number char(11) not null,
-    Fname VARCHAR(50) not null,
-    Minit VARCHAR(50) null,
-    Lname VARCHAR(50) not null,
-    Bdate DATE not null,
-    gender CHAR(8) not null check(gender='Male' or gender='Female' or gender='LGBT'),
-    registration_date smalldatetime,
-    working_date_per_month INT not null check(working_date_per_month >= 0 and working_date_per_month < 401),
-    constraint login_employee PRIMARY KEY(account_id, username)
+    account_id INT not null AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    password varchar(50),
+    email VARCHAR(50),
+    mgr_id INT,
+    phone_number char(11),
+    Fname VARCHAR(50),
+    Minit VARCHAR(50),
+    Lname VARCHAR(50),
+    Bdate DATE,
+    gender CHAR(8),
+    registration_date DATE,
+    working_date_per_month INT, 	
+    foreign key (mgr_id) references MANAGERS(account_id) on delete no action
 );
 
 ----------------------------------------------------------------
@@ -77,15 +78,17 @@ create table CHEFS
 );
 
 ----------------------------------------------------------------
-
 create table MANAGERS
 (
-    account_id char(7) not null,
-    username VARCHAR(50) not null,
-    college_certification varchar(255) not null,
-    toeic_certification varchar(255) not null,
-    primary key (account_id, username),
-    foreign key(account_id, username) REFERENCES EMPLOYEES(account_id, username) on update CASCADE
+    account_id INT not null AUTO_INCREMENT primary key,
+    username VARCHAR(50),
+    age INT,
+    Nemployee INT DEFAULT 0,
+    college_certification VARCHAR(255),
+    toeic_certification INT,
+    Fname VARCHAR(50) not null,
+    Minit VARCHAR(50),
+    Lname VARCHAR(50) not null
 );
 
 ----------------------------------------------------------------
