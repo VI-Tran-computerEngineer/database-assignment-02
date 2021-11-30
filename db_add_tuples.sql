@@ -96,3 +96,32 @@ VALUES
 INSERT INTO ORDER_BILLS
 VALUES
     ('2021-11-20 19:00:34', 'Cash', 230000, '4564564');
+------------------------------------------------
+INSERT INTO CUSTOMERS 
+VALUES ('1111111', 'vitran', '1814804', 'vitran2000_vi@hcmut.edu.vn',
+'0322432411', 'Tran', 'Long', 'Vi', '1-1-2000', 'Male', 
+'2021-11-18 18:07:03', 0);
+
+INSERT INTO CUSTOMERS(account_id, username, password, email, phone_number, 
+        Fname,Minit,Lname, Bdate, gender, registration_date, bonus_point)
+VALUES ('KH006','Tri006','123456','vanTri@gmail.com',
+'0136356709','Tri','Van','Nguyen','1995-09-10','Male','',0) 
+
+INSERT INTO CUSTOMERS(account_id, username, password, email, phone_number, 
+        Fname,Minit,Lname, Bdate, gender, registration_date, bonus_point)
+VALUES ('KH007','Tam007','123456','leTam@gmail.com',
+'0236356709','Tam','Le','Nguyen','1994-10-08','Male','',10) 
+	        ------------------------------------------------
+INSERT INTO SUPPLIERS VALUES ('CTy A','abc','cta@gmail.com');
+INSERT INTO SUPPLIERS VALUES ('CTy B','cbc','ctb@gmail.com');
+INSERT INTO SUPPLIERS VALUES ('CTy C','aba','ctc@gmail.com'); 
+	        ------------------------------------------------
+INSERT INTO CONSIGNMENTS(consignment_id, supplier, consigned_day, 
+                        chef_id, chef_username, branch_name)
+VALUES ('CS0001','CTy A',GETDATE(),'E001','employee1','CN01');
+INSERT INTO CONSIGNMENTS(consignment_id, supplier, consigned_day, 
+                        chef_id, chef_username, branch_name)
+VALUES ('CS0002','CTy A',GETDATE(),'E001','employee1','CN01');
+INSERT INTO CONSIGNMENTS(consignment_id, supplier, consigned_day, 
+                        chef_id, chef_username, branch_name)
+VALUES ('CS0003','CTy B',GETDATE(),'E001','employee1','CN01');
