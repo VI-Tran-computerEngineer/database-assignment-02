@@ -5,13 +5,9 @@ use db_assigment2;
 create index idx_customer_name
 on CUSTOMERS(Fname, Minit, Lname);
 
--- Get dish name
-create index idx_dish_name
-on DISHES(dish_name);
-
--- Get dish price
-create index idx_dish_price
-on DISHES(price);
+-- Get dish name and price
+create index idx_dish_info
+on DISHES(dish_name, price);
 
 -- Get voucher value
 create index idx_voucher_value
